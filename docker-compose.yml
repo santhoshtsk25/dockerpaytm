@@ -1,0 +1,29 @@
+version: '3'
+services:
+  billpayment:
+    image: santhoshtsk/paytmbillpayment:latest
+    ports:
+      - "60:80"
+    deploy:
+      replicas: 2
+
+  dthrecharge:
+    image: santhoshtsk/paymdthrecharge:latest
+    ports:
+      - "61:80"
+    deploy:
+      replicas: 2
+
+  traintickets:
+    image: santhoshtsk/paytmtraintickets:latest
+    ports:
+      - "62:80"
+    deploy:
+      replicas: 2
+
+  electricitybill:
+    image: santhoshtsk/paytmelelectricitybill:latest
+    ports:
+      - "63:80"
+    deploy:
+      replicas: 2
